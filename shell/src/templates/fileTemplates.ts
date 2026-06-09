@@ -11,29 +11,6 @@ export interface FileTemplate {
 
 export const FILE_TEMPLATES: FileTemplate[] = [
   {
-    extension: 'kanban',
-    displayName: 'Kanban Board',
-    icon: 'LayoutDashboard',
-    getDefaultContent: () => {
-      const now = new Date().toISOString();
-      return JSON.stringify(
-        {
-          name: 'New Kanban Board',
-          description: '',
-          createdAt: now,
-          updatedAt: now,
-          columns: [
-            { id: 'todo', title: 'Backlog', color: '#6b7cff', cards: [] },
-            { id: 'doing', title: 'In Progress', color: '#4ec5ff', cards: [] },
-            { id: 'done', title: 'Done', color: '#6de3b6', cards: [] },
-          ],
-        },
-        null,
-        2
-      );
-    },
-  },
-  {
     extension: 'agents',
     displayName: 'Agent Workspace',
     icon: 'Bot',

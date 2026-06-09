@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import { isKanbanFile } from '../apps/fileMatchers';
 import type { AppEntry } from '../types';
 
 // Import built-in apps (will be added later)
@@ -43,10 +42,6 @@ export const useAppStore = create<AppStore>((set, get) => ({
   getAppForFile: (filePath) => {
     const { apps } = get();
     const ext = getExtension(filePath);
-
-    if (isKanbanFile(filePath)) {
-      return apps.get('kanban-board') || null;
-    }
 
     for (const app of apps.values()) {
       if (app.fileTypes?.includes(ext)) {

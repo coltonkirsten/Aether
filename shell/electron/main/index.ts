@@ -148,9 +148,7 @@ function createMain(): BrowserWindow {
       preload: PRELOAD_PATH,
       contextIsolation: true,
       nodeIntegration: false,
-      sandbox: true,
-      // The absorbed Viewer browser app hosts pages in a <webview>.
-      webviewTag: true
+      sandbox: true
     }
   })
 

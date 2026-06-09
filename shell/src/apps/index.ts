@@ -1,5 +1,4 @@
 import type { AppDefinition } from './types';
-import { isKanbanFile } from './fileMatchers';
 
 // Auto-discover all apps using Vite's import.meta.glob
 // Each app folder must have an index.ts that exports `app: AppDefinition`
@@ -39,12 +38,6 @@ export function getApp(id: string): AppDefinition | undefined {
 export function getAppForFile(filePath: string): AppDefinition | undefined {
   const fileName = filePath.split('/').pop()?.toLowerCase() || '';
   const ext = fileName.split('.').pop()?.toLowerCase() || '';
-
-  // kb_*.json always opens in kanban
-  if (isKanbanFile(filePath)) {
-    const kanbanApp = appRegistry.get('kanban-board');
-    if (kanbanApp) return kanbanApp;
-  }
 
   // Find app that handles this extension
   for (const app of appRegistry.values()) {

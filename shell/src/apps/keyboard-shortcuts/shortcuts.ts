@@ -81,38 +81,6 @@ export const SHORTCUT_GROUPS: ShortcutGroup[] = [
     ],
   },
   {
-    scope: 'Kanban Board',
-    hint: 'When a kanban file is focused. Press ? for inline help.',
-    shortcuts: [
-      { description: 'Show inline help overlay', keys: '?' },
-      { description: 'New card in focused column', keys: 'n' },
-      { description: 'Open / edit selected card', keys: 'Enter' },
-      { description: 'Move selection up', keys: ['ArrowUp', 'k'] },
-      { description: 'Move selection down', keys: ['ArrowDown', 'j'] },
-      { description: 'Move selection left (column)', keys: ['ArrowLeft', 'h'] },
-      { description: 'Move selection right (column)', keys: ['ArrowRight', 'l'] },
-      { description: 'Move card up within column', keys: 'Shift+ArrowUp' },
-      { description: 'Move card down within column', keys: 'Shift+ArrowDown' },
-      { description: 'Move card to previous column', keys: 'Shift+ArrowLeft' },
-      { description: 'Move card to next column', keys: 'Shift+ArrowRight' },
-      { description: 'Close modal / clear selection', keys: 'Esc' },
-    ],
-  },
-  {
-    scope: 'Knowledge Graph',
-    hint: 'Navigating and editing the graph canvas.',
-    shortcuts: [
-      { description: 'Open search panel', keys: 'Mod+f' },
-      { description: 'Add new node at center', keys: 'n' },
-      { description: 'Delete selected node / edge', keys: ['Delete', 'Backspace'] },
-      { description: 'Zoom in', keys: ['Mod+=', 'Mod++'] },
-      { description: 'Zoom out', keys: 'Mod+-' },
-      { description: 'Reset zoom / fit graph', keys: 'Mod+0' },
-      { description: 'Confirm edge label', keys: 'Enter' },
-      { description: 'Cancel edit', keys: 'Esc' },
-    ],
-  },
-  {
     scope: 'Terminal',
     hint: 'Inside a terminal tab.',
     shortcuts: [
@@ -133,17 +101,6 @@ export const SHORTCUT_GROUPS: ShortcutGroup[] = [
     ],
   },
   {
-    scope: 'Browser',
-    hint: 'Inside the embedded browser tab.',
-    shortcuts: [
-      { description: 'Focus address bar', keys: 'Mod+l' },
-      { description: 'Reload page', keys: 'Mod+r' },
-      { description: 'Hard reload', keys: 'Mod+Shift+r' },
-      { description: 'Go back', keys: 'Mod+ArrowLeft' },
-      { description: 'Go forward', keys: 'Mod+ArrowRight' },
-    ],
-  },
-  {
     scope: 'Mermaid / Diagram Viewers',
     hint: 'Diagram and graph preview windows.',
     shortcuts: [
@@ -159,17 +116,6 @@ export const SHORTCUT_GROUPS: ShortcutGroup[] = [
     shortcuts: [
       { description: 'Toggle dictation', keys: 'Mod+Shift+d' },
       { description: 'Stop and discard transcript', keys: 'Esc' },
-    ],
-  },
-  {
-    scope: 'Calculator',
-    hint: 'When the calculator app is focused.',
-    shortcuts: [
-      { description: 'Digits and decimal', keys: '0-9, .' },
-      { description: 'Operators', keys: '+, -, *, /' },
-      { description: 'Evaluate', keys: ['=', 'Enter'] },
-      { description: 'Clear all', keys: ['c', 'Esc'] },
-      { description: 'Backspace last digit', keys: 'Backspace' },
     ],
   },
 ];
