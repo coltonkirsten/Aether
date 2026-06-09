@@ -156,6 +156,16 @@ historical record.
 ### Fixed
 
 ### Removed
+- Slimmed the viewer app roster: deleted six standalone tool/toy apps —
+  **Calculator, Kanban, Sound Designer, Dependency Graph, Knowledge Graph,
+  Browser** — leaving the system surfaces and file viewers. Removed their
+  registry/UI tendrils: the `isKanbanFile` matcher + its consumers
+  (`apps/index.ts`, `AppContext.tsx`, `appStore.ts`), the `.kanban` file
+  template, the kanban `FileExplorer` icon, the Kanban/Knowledge Graph/Browser/
+  Calculator keyboard-shortcut groups, and the now-unused `webviewTag` Electron
+  flag (browser was its only consumer). Sound Designer's `components/` are kept
+  (Settings' Sound tab consumes them); only its launchable app surface
+  (`index.ts` + `SoundDesigner.tsx`) was removed.
 - Stray `scratch-test.txt` from the repo root (empty placeholder; Architect-authorized
   cleanup as part of the repo-front-v2 lane).
 

@@ -8,7 +8,6 @@ import {
   Image,
   FileType,
   File,
-  Layout,
   Plane,
   Users
 } from 'lucide-react';
@@ -54,7 +53,6 @@ export function FileIcon({ type, extension, isExpanded }: FileIconProps) {
     svg: { Icon: Image, color: FILE_TYPE_COLORS.image },
     pdf: { Icon: FileType, color: FILE_TYPE_COLORS.pdf },
     txt: { Icon: File, color: FILE_TYPE_COLORS.txt },
-    kanban: { Icon: Layout, color: FILE_TYPE_COLORS.kanban },
     airplane: { Icon: Plane, color: FILE_TYPE_COLORS.airplane },
     agents: { Icon: Users, color: FILE_TYPE_COLORS.agents },
   };

@@ -1,7 +1,6 @@
 import { createContext, useContext, useMemo, type ReactNode } from 'react';
 import { useWorkspaceStore } from '../stores/workspaceStore';
 import { fileApi } from '../stores/fileSystemStore';
-import { isKanbanFile } from './fileMatchers';
 import type { AppContextValue } from './types';
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -32,9 +31,7 @@ export function AppProvider({ children, windowId, tabId }: AppProviderProps) {
       const ext = path.split('.').pop()?.toLowerCase() || '';
       let appId = 'text-editor';
 
-      if (isKanbanFile(path)) {
-        appId = 'kanban-board';
-      } else if (['md', 'markdown'].includes(ext)) {
+      if (['md', 'markdown'].includes(ext)) {
         appId = 'markdown-editor';
       } else if (ext === 'json') {
         appId = 'json-viewer';

@@ -10,7 +10,6 @@ export const FILE_TYPE_COLORS = {
   image: 'text-green-400',
   pdf: 'text-red-400',
   txt: 'text-gray-400',
-  kanban: 'text-indigo-400',
   airplane: 'text-sky-400',
   agents: 'text-emerald-400',
   default: 'text-[var(--holo-muted)]'
